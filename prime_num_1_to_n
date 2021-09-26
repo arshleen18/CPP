@@ -1,0 +1,32 @@
+/*find prime number from 1 to n*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   int n, i, prime=true;
+   
+   cout<<"enter num: ";
+   cin>>n;
+
+   cout<<"all the prime numbers from 1 to "<<n<<endl;
+   for(i=1; i<=n; i++)
+   {
+      if(i==1)
+      continue;
+
+      for(int j=2; j<i; j++)
+      {
+         if(i%j==0)
+         {
+            prime=false;
+            break;
+         }
+         else
+         prime=true;
+      }
+      if(prime)
+      cout<<i<<" ";
+   }
+   return 0;
+}
