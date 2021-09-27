@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-   int i, n, arr[100], j, a=0, b=1, c;
+   int i, n, arr[100], j, a=0, b=1, c=0;
    cin>>n;
    for(i=0; i<=n; i++)
    {
@@ -16,12 +16,13 @@ int main()
    }
    cout<<endl;
    cout<<"the fibonacci series is "<<a<<" "<<b<<" ";
-   while((a+b)<=n)
+   c=a+b;
+   while(c<=n)
    {
-      c=a+b;
       cout<<c<<" ";
       a=b;
       b=c;
+      c=a+b;
    }
    return 0;
 }
